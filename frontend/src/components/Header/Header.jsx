@@ -54,7 +54,7 @@ const Header = () => {
             { to: '/features', label: 'Features' },
             { to: '/about', label: 'About Us' },
             { to: '/pricing', label: 'Pricing' },
-            { to: '/secure-chat', label: 'Secure Chat' },
+
             ...(isAuthenticated ? [{ to: '/dashboard', label: 'Dashboard' }] : []),
           ].map(link => (
             <NavLink
@@ -128,7 +128,7 @@ const Header = () => {
             { to: '/features', label: 'Features' },
             { to: '/about', label: 'About Us' },
             { to: '/pricing', label: 'Pricing' },
-            { to: '/secure-chat', label: 'Secure Chat' },
+
             ...(isAuthenticated ? [{ to: '/dashboard', label: 'Dashboard' }] : []),
           ].map(link => (
             <NavLink

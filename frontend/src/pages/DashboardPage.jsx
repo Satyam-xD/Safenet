@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Shield, MessageSquare, FileText, Activity, ArrowRight, CheckCircle, AlertTriangle } from 'lucide-react';
 import { useAuth } from '../contexts/AuthContext';
 import { usePassword } from '../contexts/PasswordContext';
-import { useChat } from '../contexts/ChatContext';
+
 import { useFileContext } from '../contexts/FileContext';
 import { formatBytes } from '../utils/fileUtils';
 
@@ -13,14 +13,14 @@ const DashboardPage = () => {
 
     // Connect to contexts for real data
     const { passwords, getSecurityStats } = usePassword();
-    const { contacts } = useChat();
+
     const { files, storageUsage, auditLog } = useFileContext();
 
     const [securityScore, setSecurityScore] = useState(0);
     const [stats, setStats] = useState({
         passwords: 0,
         weakPasswords: 0,
-        contacts: 0,
+
         files: 0,
         storageUsed: 0
     });
@@ -32,11 +32,11 @@ const DashboardPage = () => {
         setStats({
             passwords: passwords.length,
             weakPasswords: secStats.weakCount,
-            contacts: contacts.length,
+
             files: files.length,
             storageUsed: storageUsage.used
         });
-    }, [passwords, contacts, files, storageUsage, getSecurityStats]);
+    }, [passwords, files, storageUsage, getSecurityStats]);
 
     const features = [
         {
@@ -50,17 +50,7 @@ const DashboardPage = () => {
             status: securityScore < 70 ? 'Action Needed' : 'Secure',
             statusColor: securityScore < 70 ? 'text-amber-600' : 'text-green-600'
         },
-        {
-            title: 'Encrypted Chat',
-            description: 'End-to-end secure messaging for your team.',
-            icon: MessageSquare,
-            path: '/secure-chat',
-            bgClass: 'bg-green-500/10',
-            iconClass: 'text-green-500',
-            stat: `${stats.contacts} Active Contacts`,
-            status: 'Online',
-            statusColor: 'text-green-600'
-        },
+
         {
             title: 'Safe File Sharing',
             description: 'Protected document transfer with access controls.',

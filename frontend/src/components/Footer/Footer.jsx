@@ -63,7 +63,7 @@ const Footer = () => {
             <h3 className="text-slate-900 font-bold mb-6 tracking-wide text-sm uppercase">Product</h3>
             <ul className="space-y-3 list-none p-0 m-0">
               {quickLinks.slice(0, 3).map((link, index) => (
-                <li key={index}>
+                <li key={index} className="bg-transparent border-none p-0 shadow-none rounded-none w-auto h-auto">
                   <Link to={link.path} className="text-sm hover:text-blue-600 transition-colors flex items-center gap-1 group decoration-0">
                     {link.name}
                   </Link>
@@ -77,7 +77,7 @@ const Footer = () => {
             <h3 className="text-slate-900 font-bold mb-6 tracking-wide text-sm uppercase">Company</h3>
             <ul className="space-y-3 list-none p-0 m-0">
               {quickLinks.slice(3).map((link, index) => (
-                <li key={index}>
+                <li key={index} className="bg-transparent border-none p-0 shadow-none rounded-none w-auto h-auto">
                   <Link to={link.path} className="text-sm hover:text-blue-600 transition-colors flex items-center gap-1 group decoration-0">
                     {link.name}
                   </Link>
@@ -89,30 +89,24 @@ const Footer = () => {
           {/* Contact Column */}
           <div>
             <h3 className="text-slate-900 font-bold mb-6 tracking-wide text-sm uppercase">Contact</h3>
-            <ul className="space-y-4 list-none p-0 m-0">
-              <li className="flex items-start gap-3 group">
-                <div className="p-2 rounded-lg bg-blue-50 text-blue-600">
+            <ul className="space-y-4 list-none p-0 m-0 pl-0">
+              <li className="flex !flex-row !justify-start !items-center gap-3 group bg-transparent border-none p-0 shadow-none rounded-none w-auto h-auto">
+                <div className="p-1.5 rounded-lg bg-blue-50 text-blue-600 shrink-0">
                   <Mail className="w-4 h-4" />
                 </div>
-                <a href="mailto:hello@safenet-solutions.com" className="text-sm hover:text-blue-600 transition-colors mt-1 decoration-0">
-                  contact@safenet-solutions.com
-                </a>
+                <a href="mailto:contact@safenet-solutions.com" className="text-sm hover:text-blue-600 transition-colors decoration-0 !text-left !m-0">contact@safenet-solutions.com</a>
               </li>
-              <li className="flex items-start gap-3 group">
-                <div className="p-2 rounded-lg bg-blue-50 text-blue-600">
+              <li className="flex !flex-row !justify-start !items-center gap-3 group bg-transparent border-none p-0 shadow-none rounded-none w-auto h-auto">
+                <div className="p-1.5 rounded-lg bg-blue-50 text-blue-600 shrink-0">
                   <Phone className="w-4 h-4" />
                 </div>
-                <a href="tel:+1-800-SAFENET" className="text-sm hover:text-blue-600 transition-colors mt-1 decoration-0">
-                  +91 1234567890
-                </a>
+                <a href="tel:+911234567890" className="text-sm hover:text-blue-600 transition-colors decoration-0 !text-left !m-0">+91 1234567890</a>
               </li>
-              <li className="flex items-start gap-3 group">
-                <div className="p-2 rounded-lg bg-blue-50 text-blue-600">
+              <li className="flex !flex-row !justify-start !items-center gap-3 group bg-transparent border-none p-0 shadow-none rounded-none w-auto h-auto">
+                <div className="p-1.5 rounded-lg bg-blue-50 text-blue-600 shrink-0">
                   <MapPin className="w-4 h-4" />
                 </div>
-                <span className="text-sm mt-1">
-                  SRMS CET Bareilly, India
-                </span>
+                <span className="text-sm !text-left !m-0">SRMS CET Bareilly, India</span>
               </li>
             </ul>
           </div>
