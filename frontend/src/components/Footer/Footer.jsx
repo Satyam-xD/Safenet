@@ -95,7 +95,7 @@ const Footer = () => {
                   <Mail className="w-4 h-4" />
                 </div>
                 <a href="mailto:hello@safenet-solutions.com" className="text-sm hover:text-blue-600 transition-colors mt-1 decoration-0">
-                  hello@safenet-solutions.com
+                  contact@safenet-solutions.com
                 </a>
               </li>
               <li className="flex items-start gap-3 group">
@@ -103,7 +103,7 @@ const Footer = () => {
                   <Phone className="w-4 h-4" />
                 </div>
                 <a href="tel:+1-800-SAFENET" className="text-sm hover:text-blue-600 transition-colors mt-1 decoration-0">
-                  +1 (800) SAFENET
+                  +91 1234567890
                 </a>
               </li>
               <li className="flex items-start gap-3 group">
@@ -111,8 +111,7 @@ const Footer = () => {
                   <MapPin className="w-4 h-4" />
                 </div>
                 <span className="text-sm mt-1">
-                  123 Security Blvd, Suite 100<br />
-                  San Francisco, CA 94105
+                  SRMS CET Bareilly, India
                 </span>
               </li>
             </ul>
